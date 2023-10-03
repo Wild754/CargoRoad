@@ -1,10 +1,10 @@
 package Interface;
 
-public class Price {
+public class Order { // перейменувати на order/invoice
     private String product;
     private String route;
     private String maintenance; // обслуговування
-    public Price(String prod, String newRoute, String main){
+    public Order(String prod, String newRoute, String main){
         this.product = prod;
         this.route = newRoute;
         this.maintenance = main;

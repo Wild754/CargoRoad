@@ -43,4 +43,5 @@ public class Route {
     public String getTime() {
         return time;
     }
+   public static Route route = new Route("", "M14", "135km", "8 hour");
 }

@@ -1,5 +1,6 @@
 package Interface;
 
+
 public class Car {
     private String brand;
     private String kg; // скільки може повести
@@ -43,4 +44,5 @@ public class Car {
     public String getGps() {
         return gps;
     }
+    public static Car car = new Car("Jack", "400", "46.98436050188412, 31.90064209839257", "20:00");
 }

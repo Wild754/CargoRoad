@@ -33,4 +33,5 @@ public class Order { // перейменувати на order/invoice
     public String getMaintenance() {
         return maintenance;
     }
+    public static Order order = new Order("10.000", "2.000", "2.500");
 }

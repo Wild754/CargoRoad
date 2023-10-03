@@ -53,4 +53,5 @@ public class Supplier {
     public String getPhonenumb() {
         return phonenumb;
     }
+    public static Supplier supplier = new Supplier("Rayan", "Gosling", "Andriyovich", "324", "552", "0689485743");
 }

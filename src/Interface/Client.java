@@ -1,6 +1,17 @@
 package Interface;
-import java.util.List;
-import java.util.ArrayList;
+import Interface.*;
+import Interface.Client.*;
+import java.util.function.Predicate;
+import static Interface.Client.*;
+import static Interface.Storage.*;
+import static Interface.Route.*;
+import static Interface.Car.*;
+import static Interface.Supplier.*;
+import static Interface.Order.*;
+import static Interface.Manager.*;
+import static Interface.Product.*;
+
+
 
 public class Client {
     private String name;
@@ -66,23 +77,9 @@ public class Client {
     public String getTg() {
         return tg;
     }
+    public int clientCount = 0;
 
-
-    public static class ClientList extends Client {
-        public List<Client> clients;
-        public static int clientCount = 0;
-
-        public ClientList(String newName, String newSurname, String newMidName, String numb, String mail, String tg) {
-            super(newName, newSurname, newMidName, numb, mail, tg);
-            this.clients = new ArrayList<>();
-        }
-    }
-
-    public void addClient(Client client) {
-        ClientList.clientCount++;
-        System.out.println("Клієнт " + client.getName() + (" ") + client.getSurname() + " був доданий до колекції. \nКлієнтів в базі: " + ClientList.clientCount);
-    }
    public static Client client = new Client("Andrew", "Baklan", "Olekandrovich", "0990804632", "andrejbaklan25@gmail.com", "@backlandly");
-   public static Client client2 = new Client("dddd", "ffff", "Olekandrovich", "0990804632", "andrejbaklan25@gmail.com", "@backlandly");
-   public static Client client3 = new Client("dsdsdsdsd", "wewewe", "Olekandrovich", "0990804632", "andrejbaklan25@gmail.com", "@backlandly");
+   public static Client client2 = new Client("Bob", "Clock", "Olekandrovich", "0990804632", "andrejbaklan25@gmail.com", "@backlandly");
+   public static Client client3 = new Client("Flok", "frog", "Olekandrovich", "0990804632", "andrejbaklan25@gmail.com", "@backlandly");
 }

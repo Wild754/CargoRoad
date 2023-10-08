@@ -1,16 +1,8 @@
 package Interface;
-import Interface.*;
-import Interface.Client.*;
-import java.util.function.Predicate;
-import static Interface.Client.*;
-import static Interface.Storage.*;
-import static Interface.Route.*;
-import static Interface.Car.*;
-import static Interface.Supplier.*;
-import static Interface.Order.*;
-import static Interface.Manager.*;
-import static Interface.Product.*;
 
+import java.util.ArrayList;
+
+import static Interface.Manager.*;
 
 
 public class Client {
@@ -20,6 +12,7 @@ public class Client {
     private String number;
     private String mail;
     private String tg;
+    private Manager assignedManager;
 
     public Client(String newName, String newSurname, String newMidName, String numb, String mail, String tg) {
         this.name = newName;
@@ -78,7 +71,19 @@ public class Client {
         return tg;
     }
     public int clientCount = 0;
-
+    public void handleClientRequest(Client client) {
+        System.out.println("Manager " + manager.getName() + " is handling a request from client " + client.getName());
+    }
+    public void assignManager(Manager manager) {
+        this.assignedManager = manager;
+    }
+    public void makeRequest() {
+        if (assignedManager != null) {
+            assignedManager.handleClientRequest(this);
+        } else {
+            System.out.println("Client " + name + " has no assigned manager.");
+        }
+    }
    public static Client client = new Client("Andrew", "Baklan", "Olekandrovich", "0990804632", "andrejbaklan25@gmail.com", "@backlandly");
    public static Client client2 = new Client("Bob", "Clock", "Olekandrovich", "0990804632", "andrejbaklan25@gmail.com", "@backlandly");
    public static Client client3 = new Client("Flok", "frog", "Olekandrovich", "0990804632", "andrejbaklan25@gmail.com", "@backlandly");

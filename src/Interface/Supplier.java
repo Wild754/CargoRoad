@@ -1,5 +1,7 @@
 package Interface;
 
+import static Interface.Storage.storage;
+
 public class Supplier extends Client {
     private String numb1; // склад з яким працює постачальник
     private String numb2; // віділення в яке поїде товар
@@ -19,6 +21,9 @@ public class Supplier extends Client {
     }
     public String getNumb2() {
         return numb2;
+    }
+    public void contactStor(){
+        System.out.println("Supplier " + supplier.getName() + " is contacting storage under the number " + storage.getNumb());
     }
     public static Supplier supplier = new Supplier("Rayan", "Gosling", "Andriyovich", "","","","","");
 }

@@ -1,11 +1,19 @@
-import static Interface.Client.*;
-import static Interface.Manager.ClientList.clients;
-import static Interface.Storage.*;
-import static Interface.Route.*;
-import static Interface.Car.*;
-import static Interface.Supplier.*;
-import static Interface.Order.*;
-import static Interface.Manager.*;
+import Managers.*;
+import Managers.ClientList;
+import Storages.*;
+import Clients.*;
+
+import static Clients.Client.*;
+import static Managers.ClientList.*;
+import static Storages.Storage.storage;
+import static Storages.StorageList.*;
+import Warehouse.*;
+
+import static Supplier.Supplier.*;
+import static Warehouse.WareList.warehouse;
+import static Warehouse.WareList.warehouses;
+import Supplier.*;
+
 
 public class Main {
 public static void main(String[]args){
@@ -17,8 +25,7 @@ public static void main(String[]args){
         System.out.println("The order of your order is "+ order.getProduct()+" the road costs "+order.getRoute()+" and the service fee is "+ order.getMaintenance());
         System.out.println("If you have any questions, please contact our manager "+ manager.getSurname()+" "+manager.getName()+" "+manager.getMidName()+"\nContact number:"+manager.getNumber());
      */
-    supplier.contactStor();
-
+    
 }
 }
 

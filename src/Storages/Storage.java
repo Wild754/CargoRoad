@@ -1,4 +1,4 @@
-package Interface;
+package Storages;
 
 public class Storage {
     public String street;
@@ -56,5 +56,11 @@ public class Storage {
     }
 
     public static Storage storage = new Storage("Krylov 19g", "46.95251547486493, 31.95676951344289", "5100 square meter", "Product composition", "324", "daily from 8:00 to 21:00");
+    public static Storage storage2 = new Storage("Krylov 19g", "46.95251547486493, 31.95676951344289", "5100 square meter", "Product composition", "126", "daily from 8:00 to 21:00");
+    public static Storage storage3 = new Storage("вавава", "46.95251547486493, 31.95676951344289", "5100 square meter", "Product composition", "083", "daily from 8:00 to 21:00");
+    public static Storage storage4 = new Storage("чячяввв", "46.95251547486493, 31.95676951344289", "5100 square meter", "Product composition", "472", "daily from 8:00 to 21:00");
 
+    public String receiveGoods(String goods) {
+        return goods;
+    }
 }

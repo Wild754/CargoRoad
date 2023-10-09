@@ -1,8 +1,8 @@
-package Interface;
+package Clients;
 
-import java.util.ArrayList;
+import Managers.Manager;
 
-import static Interface.Manager.*;
+import static Managers.Manager.*;
 
 
 public class Client {
@@ -47,7 +47,7 @@ public class Client {
         return midName;
     }
 
-    public void setNumber(String number) {
+    public void setNumber() {
         this.number = number;
     }
 
@@ -70,7 +70,7 @@ public class Client {
     public String getTg() {
         return tg;
     }
-    public int clientCount = 0;
+    public static int clientCount = 0;
     public void handleClientRequest(Client client) {
         System.out.println("Manager " + manager.getName() + " is handling a request from client " + client.getName());
     }

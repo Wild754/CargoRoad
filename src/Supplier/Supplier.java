@@ -1,10 +1,12 @@
-package Interface;
+package Supplier;
 
-import static Interface.Storage.storage;
+import Clients.Client;
+
+import static Storages.Storage.storage;
 
 public class Supplier extends Client {
-    private String numb1; // склад з яким працює постачальник
-    private String numb2; // віділення в яке поїде товар
+    private String numb1;
+    private String numb2;
     public Supplier(String newName, String newSurname, String newMidName, String numb, String mail, String tg, String newNumb1, String newNumb2){
         super(newName, newSurname, newMidName, numb, mail, tg);
         this.numb1 = newNumb1;
@@ -22,8 +24,10 @@ public class Supplier extends Client {
     public String getNumb2() {
         return numb2;
     }
-    public void contactStor(){
-        System.out.println("Supplier " + supplier.getName() + " is contacting storage under the number " + storage.getNumb());
-    }
+
+
     public static Supplier supplier = new Supplier("Rayan", "Gosling", "Andriyovich", "","","","","");
+    public static Supplier supplier2 = new Supplier("2wsdq", "Gosling", "Andriyovich", "","","","","");
+    public static Supplier supplier3 = new Supplier("Rcsfg", "Gosling", "Andriyovich", "","","","","");
+    public static Supplier supplier4 = new Supplier("gbfsds", "Gosling", "Andriyovich", "","","","","");
 }

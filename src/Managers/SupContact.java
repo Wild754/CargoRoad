@@ -4,7 +4,7 @@ import Supplier.Supplier.*;
 
 import static Supplier.Supplier.*;
 
-public interface SupContact {
+public interface SupContact {               // OCP Open/closed principleOpen/closed principle
     public void sendMessage();
 }
 class Sms extends Supplier implements SupContact {

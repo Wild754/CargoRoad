@@ -1,4 +1,4 @@
-package Supplier;
+/*package Supplier;
 
 import Storages.Storage;
 
@@ -11,3 +11,4 @@ public class getGoods extends SupStor{
         System.out.println("Supplier " + supplier.getName() + " is sending goods to " + storage.getNumb());
     }
 }
+*/

@@ -1,6 +1,6 @@
+import Car.Time;
 import Interface.Product;
-import Interface.Route;
-import Invoice.*;
+import Route.DepartTime;
 
 
 public class Main {
@@ -13,8 +13,9 @@ public static void main(String[]args){
         System.out.println("The order of your order is "+ order.getProduct()+" the road costs "+order.getRoute()+" and the service fee is "+ order.getMaintenance());
         System.out.println("If you have any questions, please contact our manager "+ manager.getSurname()+" "+manager.getName()+" "+manager.getMidName()+"\nContact number:"+manager.getNumber());
      */
- TotalCost.TotalOut();
- SaleCost.TotalSaleOut();
+    Product.addProd();
+    Product.addProd();
+    Product.addProd();
 }
 }
 

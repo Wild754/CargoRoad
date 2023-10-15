@@ -1,4 +1,5 @@
 package Interface;
+import java.util.UUID;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +38,15 @@ public class Product {
     public void setCount(String count) {
         this.count = count;
     }
+class  Bills extends Product{
+        public List<Bills> bills;
+
+
+    public Bills(String newProd, String countProd, String categoryProd) {
+        super(newProd, countProd, categoryProd);
+        this.bills = new ArrayList<>();
+    }
+}
     public static class ProdList extends Product {
         public List<Product> products;
 
@@ -46,25 +56,28 @@ public class Product {
         }
     }
     public static int ProductCount = 0;
-        public void addProd() {
-            ProdList.ProductCount++;
-            if (ProductCount == 1){
-                System.out.println("Товар додано до кошика.");
-                System.out.println("В вашому кошику " + ProductCount + " позиція");
+    public static int BillsCount = 0;
 
-            }
-            if(ProductCount >= 2 && ProductCount < 5){
-                System.out.println("Товар додано до кошика.");
-                System.out.println("В вашому кошику " + ProductCount + " позиції");
+    public static int addProd() {
+        UUID uuid = UUID.randomUUID();
+        ProdList.ProductCount++;
+        if (ProductCount == 1) {
+            System.out.println("Товар додано до кошика. \nНомер накладної: "+ uuid);
+            System.out.println("В вашому кошику " + ProductCount + " позиція");
 
-            }
-            if(ProductCount >= 5) {
-                System.out.println("Товар додано до кошика.");
-                System.out.println("В вашому кошику " + ProductCount + " позицій");
-
-            }
         }
+        if (ProductCount >= 2 && ProductCount < 5) {
+            System.out.println("Товар додано до кошика.\nНомер накладної: " + uuid);
+            System.out.println("В вашому кошику " + ProductCount + " позиції");
 
+        }
+        if (ProductCount >= 5) {
+            System.out.println("Товар додано до кошика.\nНомер накладної: " + uuid);
+            System.out.println("В вашому кошику " + ProductCount + " позицій");
+
+        }
+        return 0;
+    }
     public static Product product = new Product("Fruits", "5 kg", "Grocery product");
 }
 
